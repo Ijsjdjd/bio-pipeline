@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PaperArgumentDAG",
+  "type": "object",
+  "required": [
+    "document_id",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "document_id": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title",
+          "statement",
+          "context",
+          "variables",
+          "quantities",
+          "assumptions",
+          "limitations",
+          "epistemic_status",
+          "evidence_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "problem",
+              "hypothesis",
+              "dataset",
+              "method",
+              "technique",
+              "experiment",
+              "control",
+              "metric",
+              "result",
+              "interpretation",
+              "assumption",
+              "limitation"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "context": {
+            "type": "object",
+            "required": [
+              "organism",
+              "specimen",
+              "data_version",
+              "measurement_unit",
+              "experimental_conditions"
+            ],
+            "properties": {
+              "organism": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "specimen": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "data_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "measurement_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "experimental_conditions": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "variables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "role",
+                "description"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "quantities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "value",
+                "unit",
+                "denominator",
+                "scope",
+                "evidence_ids"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "string",
+                    "null"
+                  ]
+                },
+                "unit": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "denominator": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "scope": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "assumptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "epistemic_status": {
+            "enum": [
+              "reported_observation",
+              "reported_method",
+              "author_interpretation",
+              "author_hypothesis",
+              "explicit_assumption",
+              "reported_limitation",
+              "research_question"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "relation",
+          "explanation",
+          "basis",
+          "evidence_ids"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "motivates",
+              "prerequisite",
+              "supports",
+              "constrains"
+            ]
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "basis": {
+            "enum": [
+              "source_explicit",
+              "analyst_inference"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

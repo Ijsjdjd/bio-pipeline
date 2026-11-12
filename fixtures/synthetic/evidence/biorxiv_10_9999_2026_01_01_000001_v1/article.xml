@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+ <front>
+  <article-meta>
+   <article-id pub-id-type="doi">10.9999/demo.001</article-id>
+   <article-version>1</article-version>
+   <pub-date><year>2026</year></pub-date>
+   <permissions><license xlink:href="http://creativecommons.org/licenses/by/4.0/"/></permissions>
+   <abstract><p>We tested whether compound X reduces cytokine Y secretion in human monocytes. Compound X inhibited Y secretion by 62% at 10 uM (p=0.003, triplicate).</p></abstract>
+  </article-meta>
+ </front>
+ <body>
+  <sec><title>Results</title>
+   <p>Monocytes treated with 10 uM compound X secreted 38 pg/mL of cytokine Y, compared with 100 pg/mL in vehicle controls.</p>
+   <p>Dose response showed an IC50 of 4.2 uM, with no loss of viability at up to 30 uM.</p>
+  </sec>
+  <sec><title>Discussion</title>
+   <p>These data support a dose-dependent inhibitory effect, although the mechanism remains unknown.</p>
+  </sec>
+ </body>
+</article>

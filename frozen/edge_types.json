@@ -1,0 +1,6 @@
+{
+  "motivates": "问题促成方法或实验",
+  "prerequisite": "源节点是目标步骤或推断的必要前提",
+  "supports": "源证据支持目标结论",
+  "constrains": "源条件限制目标结论范围"
+}

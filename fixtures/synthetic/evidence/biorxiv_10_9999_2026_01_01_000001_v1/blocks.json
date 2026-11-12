@@ -1,0 +1,26 @@
+[
+ {
+  "id": "biorxiv_10_9999_2026_01_01_000001_v1:b0001",
+  "section": "Abstract",
+  "text": "We tested whether compound X reduces cytokine Y secretion in human monocytes. Compound X inhibited Y secretion by 62% at 10 uM (p=0.003, triplicate).",
+  "xml_xpath": "/article/front/article-meta/abstract",
+  "char_start": 0,
+  "char_end": 149
+ },
+ {
+  "id": "biorxiv_10_9999_2026_01_01_000001_v1:b0002",
+  "section": "Results",
+  "text": "Results Monocytes treated with 10 uM compound X secreted 38 pg/mL of cytokine Y, compared with 100 pg/mL in vehicle controls. Dose response showed an IC50 of 4.2 uM, with no loss of viability at up to 30 uM.",
+  "xml_xpath": "/article/body/sec[1]",
+  "char_start": 0,
+  "char_end": 207
+ },
+ {
+  "id": "biorxiv_10_9999_2026_01_01_000001_v1:b0003",
+  "section": "Discussion",
+  "text": "Discussion These data support a dose-dependent inhibitory effect, although the mechanism remains unknown.",
+  "xml_xpath": "/article/body/sec[2]",
+  "char_start": 0,
+  "char_end": 105
+ }
+]

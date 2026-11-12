@@ -1,0 +1,19 @@
+# LLaMA-Factory SFT example. Add a dataset entry to dataset_info.json, e.g.:
+# "bio_sft_sharegpt": {"file_name": "sharegpt_train.jsonl", "formatting": "sharegpt",
+#                      "columns": {"messages": "conversations", "system": "system"}}
+stage: sft
+do_train: true
+model_name_or_path: <MODEL_PATH>
+dataset: bio_sft_sharegpt
+cutoff_len: 32768          # or 131072 for long-context training
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-5
+num_train_epochs: 2
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+bf16: true
+gradient_checkpointing: true
+logging_steps: 10
+save_steps: 200
+output_dir: <OUTPUT_DIR>

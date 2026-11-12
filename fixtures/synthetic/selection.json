@@ -1,0 +1,20 @@
+{
+ "documents": [
+  {
+   "document_id": "biorxiv_10_9999_2026_01_01_000001_v1",
+   "doi": "10.9999/demo.001",
+   "version": "1",
+   "title": "Compound X inhibits cytokine Y in human monocytes",
+   "source_dir": "fixtures/synthetic/evidence/biorxiv_10_9999_2026_01_01_000001_v1",
+   "xml_sha256": "c115fa9187d5315a479bf2ea29b6c3bec922a3fb3f1511cd495e5c732148f35f",
+   "classification": {
+    "domain_id": "D01",
+    "domain": "Molecular mechanisms",
+    "subdomain_id": "SD01",
+    "subdomain": "Molecular signaling",
+    "topic_id": "T001",
+    "topic": "Cytokine signaling"
+   }
+  }
+ ]
+}
